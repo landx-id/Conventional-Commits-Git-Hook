@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import re, sys
 
@@ -10,5 +10,5 @@ regex = r"^(fix|feat|BREAKING CHANGE|chore|docs|style|refactor|perf|test|improve
 matches = re.search(regex, message)
 
 if not matches:
-    print ("Commit message not follow Conventional Commits")
+    print ("\033[93m Commit message not follow Conventional Commits \033[0m")
     exit(1)
