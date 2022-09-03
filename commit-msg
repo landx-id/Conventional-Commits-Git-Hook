@@ -10,5 +10,6 @@ regex = r"^(fix|feat|BREAKING CHANGE|chore|docs|style|refactor|perf|test|improve
 matches = re.search(regex, message)
 
 if not matches:
-    print ("\033[93m Commit message not follow Conventional Commits \033[0m")
+    print ("\033[93mWarning:\nCommit message not follow Conventional Commits")
+    print ("Please follow this convention: https://www.conventionalcommits.org/en/v1.0.0/ \033[0m")
     exit(1)
